@@ -3,112 +3,137 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresários</title>
-
-    <script>
-         $nome = prompt("Qual o seu nome? ")
-         document.writeln("Seu nome é=  " + $nome)
-
-         document.write(" <br> ")
-         $sexo = prompt("Qual o seu sexo? [M] ou [F]")
-        
-
-        if(($sexo == "M") || ($sexo == "m"))
-         {
-            document.writeln("Masculino")
-         }
-        else
-         {
-            document.writeln("Feminino")
-         }
-        
-         document.write(" <br> ")
-         $idade = prompt("Qual á a sua idade? ")
-         document.writeln("Idade = " + $idade)
-         
-
-        if(($idade < 18))
-         {
-            document.writeln("(Menor de Idade)")
-         }
-        else
-         {
-            document.writeln("(Maior de Idade)")
-         }
-
-
-
-
-
-        alert("Hello Wrold!")
-        document.write(" <center> ")
-        document.write(" <font color='red' size='6'> Senai/Sumré </font> ")
-        document.write(" <br> ")
-        document.write(" <img src='img/homem/h1.png' width='20%' alt='100'> ")
-        document.write(" <br> ")
-    </script>
+    <title>Document</title>
 </head>
 
+<script>
+
+    document.write("<h1>Classificação genero e idade </h1>")
+
+    
+
+   
+
+    $idade = prompt("Qual é a  sua idade?")
+
+    $nome = prompt("Qual é o seu nome?")
+
+    $sexo = prompt("Qual é o seu sexo? [m] ou [f]")
+
+    if (($sexo == "m") || ($sexo == "M") || ($sexo == "f") || ($sexo == "F")) {
+        if (($sexo == "m") || ($sexo == "M")) {
+            if ($idade < 18) {
+                alert("MENINO")
+
+                //Esta parte do código gera a tabela com a imagem de um menino
+                document.write("<center>")// o "center" serve para centralizar a tabela 
+                document.write("<table border='4' width = '750' height = '500'>") // o table cria a tabela 
+                document.write("<tr bgcolor = 'green'>") // o "td" cria as colunas da tabela 
+                document.write("<td><B>NOME</B></td>")
+                document.write("<td><B>GENERO</B></td>")
+                document.write("<td><B>IDADE</B></td>")
+                document.write("<td><B>IMAGEM</B></td>")
+                document.write("</tr>")
+                document.write("<tr>")
+                document.write("<td>" + $nome)
+                document.write("<td>Masculino</td>")
+                document.write("<td>" + $idade)
+                document.write("</td>")
+                document.write("<td><img src='img/menino.png' width='100%' height = '100%' alt='erro'>")
+                document.write("</td>")
+                document.write("</tr>")
+                document.write("</table>")
+
+
+            }
+
+            else {
+
+
+                alert("HOMEM")
+
+                //Esta parte do código gera a tabela com a imagem de um homem
+
+                document.write("<center>") // o "center" serve para centralizar a tabela 
+                document.write("<table border='4' width = '750' height = '500'>")// o table cria a tabela 
+                document.write("<tr bgcolor = 'green' width = '150' height = '50'>") // o "tr" cria a linha da tabela
+                document.write("<td><B>NOME</B></td>")// o "td" cria as colunas da tabela 
+                document.write("<td><B>GENERO</B></td>")
+                document.write("<td><B>IDADE</B></td>")
+                document.write("<td><B>IMAGEM</B></td>")
+                document.write("</tr>")
+                document.write("<tr>")
+                document.write("<td>" + $nome)
+                document.write("<td>Masculino</td>")
+                document.write("<td>" + $idade)
+                document.write("</td>")
+                document.write("<td><img src='img/'homem'.png' width='100%' height = '100%' alt='erro'>")
+                document.write("</td>")
+                document.write("</tr>")
+                document.write("</table>")
+
+            }
+        }
+
+        if (($sexo == "f") || ($sexo == "F")) {
+            if ($idade < 18) {
+                alert("MENINA")
+
+                //Esta parte do código gera a tabela com a imagem de uma menina
+
+                document.write("<center>") // o "center" serve para centralizar a tabela 
+                document.write("<table border='4' width = '750' height = '500'>") // o table cria a tabela 
+                document.write("<tr bgcolor = 'green' width = '150' height = '50'>") // o "tr" cria a linha da tabela
+                document.write("<td><B>NOME</B></td>") // o "td" cria as colunas da tabela 
+                document.write("<td><B>GENERO</B></td>")
+                document.write("<td><B>IDADE</B></td>")
+                document.write("<td><B>IMAGEM</B></td>")
+                document.write("</tr>")
+                document.write("<tr>")
+                document.write("<td>" + $nome)
+                document.write("<td>Femino</td>")
+                document.write("<td>" + $idade)
+                document.write("</td>")
+                document.write("<td><img src='img/menina.png' width='100%' height = '100%' alt='erro'>")
+                document.write("</td>")
+                document.write("</tr>")
+                document.write("</table>")
+            }
+
+            else {
+                alert("MULHER")
+                //Esta parte do código gera a tabela com a imagem de uma mulher 
+                document.write("<center>") // o "center" serve para centralizar a tabela 
+                document.write("<table border='4' width = '750' height = '500'>") // o table cria a tabela 
+                document.write("<tr bgcolor = 'green' width = '150' height = '50'>")// o "tr" cria a linha da tabela
+                document.write("<td><B>NOME</B></td>") // o "td" cria as colunas da tabela 
+                document.write("<td><B>GENERO</B></td>")
+                document.write("<td><B>IDADE</B></td>")
+                document.write("<td><B>IMAGEM</B></td>")
+                document.write("</tr>")
+                document.write("<tr>")
+                document.write("<td>" + $nome)
+                document.write("<td>Femino</td>")
+                document.write("<td>" + $idade)
+                document.write("</td>")
+                document.write("<td><img src='img/mulher.png' width='100%' height = '100%' alt='erro'>")
+                document.write("</td>")
+                document.write("</tr>")
+                document.write("</table>")
+            }
+        }
+    }
+    else {
+        alert("ERRO! é necessario digitar [f] ou [m]")
+
+    }
+
+
+
+</script>
+
 <body>
-    <center>
-        <font color="#00BF63" size="7">
-            Tabela dos Empresários (HOMENS/MULHERES)
-        </font>
-    </center>
-    <br>
-    <br>
-
-
-
-    <center>
-        <table border="6" width="600">
-            <tr bgcolor="#FFB647">
-                <td width="250" > <center><b>NOME</b> </td> </center>
-                <td width="250"> <center> <b>IDADE</b> </td> </center>
-                <td width="250"> <center> <b>FOTO</b> </td> </center>
-            </tr>
-
-    <tr>
-        <td> Abílio Diniz </td>
-        <td> 88 anos </td>
-        <td> <a href="https://github.com/PedroForleco"><img src="img/homem/h1.png" width="100%" alt="100"> </td></a>
-    </tr>
-
-    <tr>
-        <td> Bruno Perini </td>
-        <td> 36 anos </td>
-        <td> <a href="https://github.com/PedroForleco"><img src="img/homem/h2.png" width="100%" alt="100"> </td></a>
-    </tr>
-
-    <tr>
-        <td> Joel Jota </td>
-        <td> 43 anos </td>
-        <td> <a href="https://github.com/PedroForleco"><img src="img/homem/h3.png" width="100%" alt="100"></td></a>
-    </tr>
-
-    <tr>
-        <td> Karla Adibe</td>
-        <td> 46 anos </td>
-        <td> <a href="https://github.com/PedroForleco"><img src="img/mulher/m1.png" width="100%" alt="100"> </td> </a>
-    </tr>
-
-    <tr>
-        <td> Louise Barsi</td>
-        <td> 30 anos </td>
-        <td> <a href="https://github.com/PedroForleco"><img src="img/mulher/m2.png" width="100%" alt="100"></td></a>
-    </tr>
-
-    <tr>
-        <td> Malu Perini</td>
-        <td> 32 anos </td>
-        <td> <a href="https://github.com/PedroForleco"><img src="img/mulher/m3.png" width="100%" alt="100"></td></a>
-    </tr>
-
-    </table>
-    </center>
-
 
 
 
